@@ -11,6 +11,12 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        // your code here
+        var text="";
+        for (i=1; i<21; i++) {
+            if (i%2 == 0) {
+                text = text + (i*i) + " ";
+            }
+        }
+        alert("Les carrés des nombres pairs entre 1 et 21 sont: " + text +".")
     });
 })();
