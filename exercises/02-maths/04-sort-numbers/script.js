@@ -13,6 +13,35 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", () => {
-        // your code here
+        var text = document.getElementById("numbers").value;
+        let numbers = [];
+        var number = "";
+        var next = ",";
+        for (i=0; i < text.length; i++) {            
+            if (text[i] != next) {
+                number = number + text[i];
+            } else  {
+                i=i+1;
+                numbers.push(parseInt(number));
+                number="";
+            }
+        }
+        numbers.push(parseInt(number));
+
+        let sorted = false;
+        while(!sorted) {
+            sorted = true;
+            for(var i=0; i < numbers.length; i++) {
+                if(numbers[i] < numbers[i-1]) {
+                    let temp = numbers[i];
+                    numbers[i] = numbers[i-1];
+                    numbers[i-1] = temp;
+                    sorted = false;
+                }
+            }
+        }
+
+        alert(numbers);
+
     });
 })();
