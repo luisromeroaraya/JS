@@ -11,9 +11,10 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        var nacimiento = new Date(document.getElementById("dob-year").value, document.getElementById("dob-month").value, document.getElementById("dob-day").value)
+        var nacimiento = new Date(document.getElementById("dob-year").value, document.getElementById("dob-month").value-1, document.getElementById("dob-day").value)
         var hoy = new Date();
-        var edad = Math.floor((hoy - nacimiento) / 86400000 / 365);
+        var edad = Math.floor((hoy - nacimiento) / 86400000 / 365.25);
         alert("Vous avez: "+ edad +" ans"); 
     });
 })();
+
