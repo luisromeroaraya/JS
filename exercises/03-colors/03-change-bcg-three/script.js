@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var red = parseInt(Math.floor(Math.random() * 255));
+        var green = parseInt(Math.floor(Math.random() * 255));
+        var blue = parseInt(Math.floor(Math.random() * 255));
+        document.body.style.backgroundColor = "rgb("+red +","+green+","+blue+")";
+    });
 })();
