@@ -11,5 +11,14 @@
 
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+    var today = new Date();
+    var days = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+    var day = days[today.getDay()];
+    var date = today.getDate();
+    var months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+    var month = months[today.getMonth()];
+    var year = today.getFullYear();
+    var hour = today.getHours();
+    var minutes = today.getMinutes();
+    document.getElementById("target").innerHTML=( day+" "+date+" "+month+" "+year+", "+hour+"h"+minutes);
 })();
