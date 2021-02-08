@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var veut = prompt("Tu veux du gâteau ?");
+    var oui = "oui"
+    if (veut == oui) {
+        alert("Félicitations !");
+    } else {
+        alert("Du gâteau, ça ne se refuse pas !");
+    }
 })();
