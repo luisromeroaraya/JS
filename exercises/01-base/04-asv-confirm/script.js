@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var loop = true;
+    var age;
+    var sexe;
+    var ville;
+    while (loop) {
+        age = prompt("Quel âge as tu ? ");
+        sexe = prompt("Quel genre es-tu ?");
+        ville = prompt("De quelle ville es-tu ?");
+        if (confirm("Tu as " + age + " ans, " + "tu es " + sexe + " et tu viens de/du " + ville + ". Est-ce que c'est correct ?")) {
+            loop=false;            
+        }
+    }
 })();
