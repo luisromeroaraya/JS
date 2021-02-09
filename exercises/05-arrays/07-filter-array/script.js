@@ -88,12 +88,7 @@
         },
     ];
     document.getElementById("run").addEventListener("click", () => {
-        newpeople=[];
-        people.forEach(element => {
-            if (element.age > 18) {
-                newpeople.push(element);
-            }
-        });
+        const newpeople = people.filter(person => person.age > 18);
         console.log(newpeople);
     });
 })();
