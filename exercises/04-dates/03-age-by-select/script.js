@@ -11,10 +11,11 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        var nacimiento = new Date(document.getElementById("dob-year").value, document.getElementById("dob-month").value-1, document.getElementById("dob-day").value)
-        var hoy = new Date();
-        var edad = Math.floor((hoy - nacimiento) / 86400000 / 365.25);
-        alert("Vous avez: "+ edad +" ans"); 
+        var dob = new Date(document.getElementById("dob-year").value, document.getElementById("dob-month").value-1, document.getElementById("dob-day").value)
+        var today = new Date();
+        var age = (today - dob) / (60*60*24*1000) / 365.25;
+        var days = (age-Math.floor(age))*365.25;
+        alert("Vous avez: "+Math.floor(age)+" ans "+"et "+Math.floor(days)+" jour(s)."); 
     });
 })();
 
