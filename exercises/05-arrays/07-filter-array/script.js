@@ -87,6 +87,13 @@
             age: 81,
         },
     ];
-
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        newpeople=[];
+        people.forEach(element => {
+            if (element.age > 18) {
+                newpeople.push(element);
+            }
+        });
+        console.log(newpeople);
+    });
 })();
