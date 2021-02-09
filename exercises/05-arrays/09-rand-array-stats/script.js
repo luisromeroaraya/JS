@@ -10,5 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        numbers=[];
+        var min=10, max=0, sum=0, med=0;
+        for (i=0; i<10;i++){
+            n=Math.floor((Math.random()*10)+1);
+            numbers.push(n);
+            if (n > max) {
+                max=n;
+            }
+            if (n < min) {
+                min=n;
+            }
+            sum=sum+n;
+        }
+        average=sum/10;
+        for (i=0; i<10; i++){
+            document.getElementById("n-"+(i+1)).innerHTML=numbers[i];
+        }
+        document.getElementById("min").innerHTML=min;
+        document.getElementById("max").innerHTML=max;
+        document.getElementById("sum").innerHTML=sum;
+        document.getElementById("average").innerHTML=average;
+    });
 })();
