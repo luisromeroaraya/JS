@@ -11,9 +11,9 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        var red = parseInt(Math.floor(Math.random() * 255));
-        var green = parseInt(Math.floor(Math.random() * 255));
-        var blue = parseInt(Math.floor(Math.random() * 255));
+        var red = parseInt(Math.floor((Math.random()*255)+1));
+        var green = parseInt(Math.floor((Math.random()*255)+1));
+        var blue = parseInt(Math.floor((Math.random()*255)+1));
         document.body.style.backgroundColor = "rgb("+red +","+green+","+blue+")";
     });
 })();
