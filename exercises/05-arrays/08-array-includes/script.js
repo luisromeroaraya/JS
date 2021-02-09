@@ -24,6 +24,13 @@
         "raisin",
         "cerise",
     ];
-
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var pomme = fruits.find(fruits => fruits == "pomme");
+        if (pomme == "pomme") {
+            console.log("Oui, il y a une pomme dans le tableau fruits.");
+        }
+        else {
+            console.log("Non, il n'y pas une pomme dans le tableau fruits.");
+        }
+    });
 })();
