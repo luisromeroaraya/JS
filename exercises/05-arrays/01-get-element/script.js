@@ -24,6 +24,7 @@
         "raisin",
         "cerise",
     ];
-
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        alert("Le quatrième élément du tableau est: "+fruits[3]);
+    });
 })();
