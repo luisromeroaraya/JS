@@ -87,6 +87,9 @@
             email: "gkeatche@google.fr",
         },
     ];
-
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var index = people.findIndex(temp => temp.lastname === "Dupont" && temp.firstname === "Jean");
+        let email = (people.find(temp => temp.lastname === "Dupont" && temp.firstname === "Jean")).email;
+        console.log("Email: "+email+" Index: "+index);
+    });
 })();
