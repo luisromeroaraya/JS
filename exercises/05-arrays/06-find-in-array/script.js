@@ -88,8 +88,8 @@
         },
     ];
     document.getElementById("run").addEventListener("click", () => {
-        var index = people.findIndex(temp => temp.lastname === "Dupont" && temp.firstname === "Jean");
-        let email = (people.find(temp => temp.lastname === "Dupont" && temp.firstname === "Jean")).email;
+        var index = people.findIndex(people => people.lastname === "Dupont" && people.firstname === "Jean");
+        let email = (people.find(people => people.lastname === "Dupont" && people.firstname === "Jean")).email;
         console.log("Email: "+email+" Index: "+index);
     });
 })();
