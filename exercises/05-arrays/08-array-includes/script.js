@@ -25,8 +25,8 @@
         "cerise",
     ];
     document.getElementById("run").addEventListener("click", () => {
-        var pomme = fruits.find(fruits => fruits == "pomme");
-        if (pomme == "pomme") {
+        var pomme = fruits.includes("pomme");
+        if (pomme) {
             console.log("Oui, il y a une pomme dans le tableau fruits.");
         }
         else {
