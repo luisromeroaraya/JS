@@ -37,6 +37,16 @@
         "tangent",
         "arboré",
     ]);
-
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var indexbird = parseInt(Math.floor((Math.random()*12)));
+        var indexadjective = parseInt(Math.floor((Math.random()*11)));
+        var bird =  birds[indexbird].name;
+        var adjective = [...adjectives][indexadjective];
+        if (birds[indexbird].fem) {
+            console.log("La "+bird+" "+adjective+"e");
+        }
+        else {
+            console.log("Le "+bird+" "+adjective);
+        }
+    });
 })();
