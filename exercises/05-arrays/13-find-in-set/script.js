@@ -21,6 +21,13 @@
         "Simon",
         "Lucas",
     ]);
-
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        console.log([...people].length);
+        if (people.has("Alexandre")) {
+            console.log("Oui, Alexandre fait partie du Set.");
+        }
+        else {
+            console.log("Non, Alexandre ne fait pas partie du Set.");
+        }
+    });
 })();
