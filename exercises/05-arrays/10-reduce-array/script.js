@@ -88,5 +88,10 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        const map = people.map(person => person.age);
+        const reducer = (total, age) => total + age;
+        console.log(map.reduce(reducer));
+    });
+
 })();
