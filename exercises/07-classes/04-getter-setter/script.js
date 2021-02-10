@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    class Person {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        getName() {
+            return (this.firstname+" "+this.lastname);
+        }
+
+        setName(newName) {
+            this.firstname = (newName.split(" "))[0];
+            this.lastname = (newName.split(" "))[1];
+        }
+    }
+    document.getElementById("run").addEventListener("click", () => {
+        const person = new Person(prompt("Please enter your First Name:"),prompt("Please enter your Last Name:"));
+        console.log(person.getName());
+        person.setName(prompt("Please enter a new Full Name:"));
+        console.log(person.getName());
+    });
+
 })();
