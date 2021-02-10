@@ -14,6 +14,6 @@
         var red = parseInt(Math.floor((Math.random()*255)+1));
         var green = parseInt(Math.floor((Math.random()*255)+1));
         var blue = parseInt(Math.floor((Math.random()*255)+1));
-        document.body.style.backgroundColor = "rgb("+red +","+green+","+blue+")";
+        document.body.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     });
 })();
