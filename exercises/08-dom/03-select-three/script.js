@@ -10,5 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    for (i=0; i<document.getElementsByClassName("target").length; i++) {
+        document.getElementsByClassName("target")[i].innerHTML="pwn3d";
+    }
 })();
