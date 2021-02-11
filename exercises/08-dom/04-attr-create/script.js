@@ -17,5 +17,4 @@
     var target = document.getElementById("target");
     target.appendChild(image);
     source.attributes.removeNamedItem("data-image");
-
 })();

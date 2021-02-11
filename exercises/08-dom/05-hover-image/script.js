@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-
     srcImg = (img) => img.setAttribute("src", src);
     hoverImg = (img) => img.setAttribute("src", hover);
     var image = document.getElementsByTagName("IMG")[0];
@@ -18,5 +17,4 @@
     hover = image.getAttribute("data-hover");
     image.setAttribute("onmouseout", "srcImg(this)");
     image.setAttribute("onmouseover", "hoverImg(this)");
-
 })();
