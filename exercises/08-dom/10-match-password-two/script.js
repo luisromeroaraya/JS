@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        passone = document.getElementById("pass-one");
+        passtwo = document.getElementById("pass-two");
+        passonetext = passone.value;
+        passtwotext = passtwo.value;
+        if (passonetext != passtwotext) {
+            passone.setAttribute("class", "error");
+            passtwo.setAttribute("class", "error");
+        }
+        else {
+            passone.removeAttribute("class");
+            passtwo.removeAttribute("class");
+        }
+    });
 })();

@@ -19,5 +19,9 @@
             passone.setAttribute("style", "border-color: red;");
             passtwo.setAttribute("style", "border-color: red;");
         }
+        else{
+            passone.removeAttribute("style");
+            passtwo.removeAttribute("style");
+        }
     });
 })();
