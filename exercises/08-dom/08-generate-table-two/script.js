@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var table = document.createElement("table");
+    var target = document.getElementById("target");
+    target.appendChild(table);
+    var ul = document.createElement("ul");
+    table.appendChild(ul);
+    for (i=1; i<=10; i++) {
+        var multiplication="";
+        for (j=1; j<=10; j++) {
+            var multiplication = multiplication+i+"x"+j+"="+(i*j)+" ";
+        }
+        var li = document.createElement("li");
+        var text = document.createTextNode(multiplication);
+        li.appendChild(text);
+        ul.appendChild(li);
+    }
 })();
