@@ -17,6 +17,15 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
-
-    // your code here
+    var n = 0;
+    var image = document.getElementsByTagName("IMG")[0];
+    document.getElementById("next").addEventListener("click", () => {
+        if (n == gallery.length-1){
+            n = 0;
+        }
+        else {
+            n = n+1;
+        }
+        image.setAttribute("src", gallery[n]);
+    });
 })();
