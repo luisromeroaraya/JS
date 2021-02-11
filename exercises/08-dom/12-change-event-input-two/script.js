@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("pass-one").addEventListener("keyup", () => {
+        passonetext = document.getElementById("pass-one").value;
+        length = passonetext.length;
+        includes=0;
+        for (i=0; i<length; i++){
+            if (passonetext.includes(i)){
+                includes = includes+1;
+            }
+        }
+        if (length >= 8 && includes >= 2) {
+            document.getElementById("validity").innerHTML = "ok";
+        }
+        else {
+            document.getElementById("validity").innerHTML = "Pas ok";
+        }
+    });
 })();
