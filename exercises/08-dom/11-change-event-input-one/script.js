@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("pass-one").addEventListener("keyup", () => {
+        passone = document.getElementById("pass-one");
+        passonetext = passone.value;
+        length = passonetext.length;
+        document.getElementById("counter").innerHTML = length+"/10";
+        if (length >= 10) {
+            passone.setAttribute("onkeypress", "return false;");
+        }
+        else {
+            passone.removeAttribute("onkeypress");
+        }
+    });
 })();
