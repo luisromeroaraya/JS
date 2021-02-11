@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var source = document.getElementById("source");
+    var value = source.getAttributeNode("data-image").value;
+    console.log(value);
+    var image = document.createElement("img");
+    image.src = value;
+    var target = document.getElementById("target");
+    target.appendChild(image);
+    source.attributes.removeNamedItem("data-image");
+
 })();
