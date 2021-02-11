@@ -12,7 +12,6 @@
 (() => {
     var source = document.getElementById("source");
     var value = source.getAttributeNode("data-image").value;
-    console.log(value);
     var image = document.createElement("img");
     image.src = value;
     var target = document.getElementById("target");

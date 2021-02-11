@@ -12,10 +12,10 @@
 (() => {
     document.getElementById("run").addEventListener("click", () => {
         var year = parseInt(document.getElementById("year").value);
-        var date = new Date(year+"-01"+"-01");
+        var date = new Date(year,01);
         var months = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
         let spookyfridays = [];
-        while (date.getFullYear() < year+1) {
+        while (date.getFullYear() == year) {
             if (date.getDay() == 5 && date.getDate() == 13) {
                 spookyfridays.push(months[date.getMonth()]);
             }
